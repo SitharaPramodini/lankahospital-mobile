@@ -10,7 +10,7 @@ function App() {
     <BrowserRouter>
       {/* <BottomMenu /> */}
       <Routes>
-        <Route path="/:id" element={<Home />} />
+        <Route path="/:id/:reqid" element={<Home />} />
       </Routes>
     </BrowserRouter>
   );

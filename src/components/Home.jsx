@@ -3,9 +3,8 @@ import Header from "./Header";
 import { useParams } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 
-
 function Home() {
-    const { id } = useParams();  // Get vehicle number from URL params
+    const { id, reqid } = useParams();  // Get vehicle number and request ID from URL params
     const [mileage, setMileage] = useState("");  // State to store mileage input
     const [loading, setLoading] = useState(false);
     const [message, setMessage] = useState("");
@@ -18,6 +17,7 @@ function Home() {
 
         const requestData = {
             vehicle_number: id,
+            request_id: reqid, // Include request_id in the API request
             mileage: parseInt(mileage, 10),
         };
 
@@ -67,6 +67,11 @@ function Home() {
                         <label className="block mb-2 text-sm font-medium text-gray-900">Vehicle Number</label>
                         <input type="text" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder={id} disabled />
                     </div>
+
+                    {/* <div className="mb-5">
+                        <label className="block mb-2 text-sm font-medium text-gray-900">Request ID</label>
+                        <input type="text" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder={reqid} disabled />
+                    </div> */}
 
                     <div className="mb-5">
                         <label className="block mb-2 text-sm font-medium text-gray-900">Current Mileage</label>
