@@ -6,7 +6,7 @@ function Header() {
     const { id } = useParams(); 
     
     return (
-        <nav class="header fixed bg-[#0096d5] border-gray-200 px-1 rounded-b-2xl pb-3 w-[101%] h-[20rem]" style={{ backgroundImage: 'url("images/backimg.jpg")', backgroundSize:'cover'}}>
+        <nav class="header fixed bg-[#0096d5] border-gray-200 px-1 rounded-b-2xl pb-3 w-[101%] h-[20rem]" style={{ backgroundImage: 'url("/images/backimg.jpg")', backgroundSize:'cover'}}>
             <div class="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto px-3 pb-3">
                 <a href="https://flowbite.com" class="flex items-center space-x-3 pt-6 rtl:space-x-reverse">
                     <img src="/images/logo.png" class="h-14 ml-1" alt="Flowbite Logo" />
