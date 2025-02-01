@@ -55,7 +55,7 @@ function GateOut() {
                 closeButton={false}
             />
             <div className="container mt-[18rem] max-w-full pt-6 pb-14 bg-[#f4f8fb] w-full absolute rounded-t-3xl h-auto">
-            <p className="text-4xl text-center font-bold tracking-normal text-blue-700 ">
+            <p className="text-4xl text-center font-bold tracking-normal text-[#0189bb] ">
             Hospital Exit
                 </p>
                 <p className="text-xl text-center font-bold tracking-normal text-gray-500 dark:text-black">
@@ -72,7 +72,7 @@ function GateOut() {
 
                     <button
                         type="submit"
-                        className="mt-4 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
+                        className="mt-4 text-white bg-[#0189bb] hover:bg-[#0177bb] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
                         disabled={loading}
                     >
                         {loading ? "Updating status..." : "Active"}

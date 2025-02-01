@@ -1,6 +1,8 @@
 import React from "react";
 import Header from "./Header";
 import { useParams, Link } from "react-router-dom";
+import { FaRoad } from "react-icons/fa";
+
 
 function Home() {
     const { id, reqid } = useParams(); // Get dynamic route parameters
@@ -13,9 +15,21 @@ function Home() {
                     Trip update at the gate
                 </p>
 
-                <div className="w-[80%] h-auto flex flex-row justify-around item gap-x-6 mx-auto my-10">
-                    <Link to={`/${id}/${reqid}/gateout`} className="text-2xl w-1/2 text-center font-bold p-6 bg-yellow-200 rounded-lg">Out</Link>
-                    <Link to={`/${id}/${reqid}/gatein`} className="text-2xl w-1/2 text-center font-bold p-6 bg-blue-200 rounded-lg">In</Link>
+                <div className="w-[80%] h-auto flex flex-col justify-around item gap-y-6 mx-auto my-10">
+                    <Link to={`/${id}/${reqid}/gateout`} className="px-8 text-2xl w-full shadow-lg text-left font-bold p-6 bg-[#d2e7ec] rounded-lg flex flex-row justify-between items-center">
+                        <div>
+                            <h1>Out</h1>
+                            <p className="text-sm">Active the trip</p>
+                        </div>
+                        <FaRoad />
+                    </Link>
+                    <Link to={`/${id}/${reqid}/gatein`} className="px-8 text-2xl w-full shadow-lg text-left font-bold p-6 bg-[#93cbdb] rounded-lg flex flex-row justify-between items-center">
+                        <div>
+                            <h1>In</h1>
+                            <p className="text-sm">Update mileage</p>
+                        </div>
+                        <FaRoad />
+                    </Link>
                 </div>
             </div>
         </div>
